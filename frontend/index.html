@@ -3,22 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
+  <title>Dulce semilla · Repostería artesanal</title>
   <meta name="description" content="Repostería artesanal por encargo. Tortas, galletas y postres hechos en casa.">
 
+  <!-- ✅ RUTA RELATIVA — durante la demo se rompe cambiándola a /styles.css -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <header>
+  <!-- ══════════ HEADER (S5: semántica · S6: flexbox) ══════════ -->
+  <header class="site-header">
+    <div class="brand">
+      <!-- ✅ RUTA RELATIVA — segundo punto de quiebre: /images/logo.png o Logo.png -->
+      <img src="images/logo.png" alt="Logo de Dulce semilla" class="brand__logo">
+      <span class="brand__name">Dulce semilla</span>
+    </div>
+    <nav class="site-nav" aria-label="Navegación principal">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto" class="nav-cta">Haz tu pedido</a>
+    </nav>
   </header>
 
   <main>
 
+    <!-- ══════════ HERO ══════════ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <p class="hero__eyebrow">Repostería artesanal · Hecha en casa</p>
+      <h1 id="hero-title">Postres que saben a domingo en familia</h1>
+      <p class="hero__lead">
+        Tortas, galletas y brownies por encargo, horneados el mismo día de la entrega.
+        Sin premezclas, sin conservantes — solo ingredientes de verdad.
+      </p>
+      <a href="#catalogo" class="btn btn--primary">Ver el catálogo</a>
+    </section>
+
+    <!-- ══════════ CATÁLOGO (S6: CSS Grid + media query) ══════════ -->
+    <section id="catalogo" class="catalog" aria-labelledby="catalog-title">
+      <h2 id="catalog-title">Nuestro catálogo</h2>
+      <p class="catalog__intro">Todo se hornea por encargo con 24 horas de anticipación.</p>
+
+      <div class="catalog__grid">
+        <article class="card">
+          <div class="card__media" aria-hidden="true">🎂</div>
+          <h3>Torta de zanahoria</h3>
+          <p>Con frosting de queso crema y nuez tostada. Porción para 12 personas.</p>
+          <p class="card__price">$48.000</p>
+        </article>
+
+        <article class="card">
+          <div class="card__media" aria-hidden="true">🍪</div>
+          <h3>Galletas de avena</h3>
+          <p>Caja por 12 unidades con chips de chocolate semiamargo.</p>
+          <p class="card__price">$22.000</p>
+        </article>
+
+        <article class="card">
+          <div class="card__media" aria-hidden="true">🍫</div>
+          <h3>Brownies clásicos</h3>
+          <p>Caja por 9, centro húmedo y corteza crocante. Opción sin nuez.</p>
+          <p class="card__price">$28.000</p>
+        </article>
+
+        <article class="card">
+          <div class="card__media" aria-hidden="true">🧁</div>
+          <h3>Cupcakes personalizados</h3>
+          <p>Mínimo 6 unidades. Decoración a tu medida para cumpleaños y eventos.</p>
+          <p class="card__price">$4.500 c/u</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ══════════ NOSOTROS ══════════ -->
+    <section id="nosotros" class="about" aria-labelledby="about-title">
+      <h2 id="about-title">Quiénes somos</h2>
+      <p>
+        Dulce semilla nació en la cocina de nuestra casa en 2025. Empezamos vendiendo
+        galletas a los vecinos y hoy entregamos pedidos en toda la ciudad.
+        Cada receta viene de la abuela — y se nota.
+      </p>
+    </section>
+
   </main>
 
-  <footer> 
-
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer id="contacto" class="site-footer">
+    <h2>Haz tu pedido</h2>
+    <p>Escríbenos por WhatsApp al <strong>300 000 0000</strong> o al correo
+      <a href="mailto:hola@dulcesemilla.co">hola@dulcesemilla.co</a></p>
+    <p class="site-footer__legal">© 2026 Dulce semilla · Proyecto de Jóvenes creaTIvos</p>
   </footer>
 
 </body>
